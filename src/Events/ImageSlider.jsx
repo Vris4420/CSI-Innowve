@@ -3,6 +3,8 @@ import ArrowLeft from "../assets/arrow-left.svg";
 import ArrowRight from "../assets/arrow-right.svg";
 import eventData from "./EventData.jsx";
 import { Link } from "react-router-dom";
+import { CardBody, CardContainer, CardItem } from "../Components/ui/3d-card.tsx";
+
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,14 +33,21 @@ const ImageSlider = () => {
         />
 
         <div className="text-center font-adam w-full">
-          <div className=" text-center max-h-[50vh]">
-            {/* Poster Div */}
-            <img
-              src={eventData[currentIndex].posterLink}
-              alt={`Event ${currentIndex + 1}`}
-              className="w-1/2 md:w-1/4 mx-auto"
-            />
-          </div>
+        <CardContainer className="inter-var">
+          <CardBody className=" relative group/card    w-auto  h-auto rounded-xl  ">
+            <CardItem translateZ="70" className="text-xl font-bold text-neutral-600 dark:text-white">
+              <div className=" text-center max-h-[50vh]">
+                {/* Poster Div */}
+                <img
+                  src={eventData[currentIndex].posterLink}
+                  alt={`Event ${currentIndex + 1}`}
+                  className="w-1/2 md:w-1/4 mx-auto "
+                />
+              </div>
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+
           <Link to={`/events/${eventData[currentIndex]?.id}`}>
             <button className="bg-slate-700 font-semibold text-white border border-white rounded-full py-2 px-6 my-3 hover:bg-white hover:text-blue-500 transition duration-300">
               Know More

@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import eventData from "./EventData";
 import { motion } from "framer-motion";
+//import { CardBody, CardContainer, CardItem } from "../Components/ui/3d-card.tsx";
 
 const EventInDetail = () => {
   const { id } = useParams();

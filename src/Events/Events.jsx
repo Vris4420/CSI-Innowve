@@ -3,6 +3,7 @@ import ArrowRight from "../assets/arrow-right.svg";
 import ImageSlider from "./ImageSlider.jsx"; // Assuming you have an ImageSlider component
 import { SparklesCore } from "../Components/ui/sparkles.tsx";
 import { WavyBackground } from "../Components/ui/wavy-background.tsx";
+
 const Events = () => {
   const [showImageSlider, setShowImageSlider] = useState(false);
 
