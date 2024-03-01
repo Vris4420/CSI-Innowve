@@ -34,7 +34,10 @@ const NavBar = () => {
   };
 
   const openBrochureInNewTab = () => {
-    window.open("https://drive.google.com/file/d/1GVeWn4GE9DQkwQOEhKW10tApuoYgsR3U/view?usp=sharing", "_blank");
+    window.open(
+      "https://drive.google.com/file/d/1GVeWn4GE9DQkwQOEhKW10tApuoYgsR3U/view?usp=sharing",
+      "_blank"
+    );
     handleMenuItemClick();
   };
 
@@ -54,6 +57,12 @@ const NavBar = () => {
             </Link>
           </div>
           <div className="flex items-center space-x-4 lg:space-x-8">
+            <button
+              onClick={openBrochureInNewTab}
+              className="text-slate-100 hover:text-red-500 bg-black border border-black px-4 py-2 rounded-lg lg:hidden sm:block"
+            >
+              Brochure
+            </button>
             <motion.button
               onClick={toggleMobileMenu}
               type="button"
@@ -151,8 +160,9 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li
-                    onClick={openBrochureInNewTab}
-                    className="block py-2 pr-4 pl-3  lg:border-0 lg:hover:text-primary-700 lg:p-0 text-black lg:hover:text-red-700 hover:text-red-700 lg:hover:bg-transparent border-gray-700 cursor-pointer">
+                  onClick={openBrochureInNewTab}
+                  className="py-2 pr-4 pl-3 hidden md:block lg:border-0 lg:hover:text-primary-700 lg:p-0 text-black lg:hover:text-red-700 hover:text-red-700 lg:hover:bg-transparent border-gray-700 cursor-pointer"
+                >
                   Brochure
                 </li>
                 <li>
